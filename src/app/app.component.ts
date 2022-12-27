@@ -7,7 +7,7 @@ import { HomeServiceService } from './home-service.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-  title = 'fng';
+  title = 'fnggg';
   finalValue!: number; 
 
   constructor(private myService : HomeServiceService){}
