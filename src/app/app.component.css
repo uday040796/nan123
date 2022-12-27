@@ -1,0 +1,32 @@
+table{
+    width: 100%;
+    border: solid grey 1px;
+    background-color: grey;
+}
+tr th{
+    border: solid grey 1px;
+    height: 45px;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+}
+tr td{
+    border: solid grey 1px;
+    height: 35px;
+    text-align: center;
+    text-transform: capitalize;
+}
+div{
+    padding: 50px;
+}
+.pvt{
+    color: green;
+}
+h1{
+    text-align: center;
+}
+.pbl{
+    color: orangered;
+}
