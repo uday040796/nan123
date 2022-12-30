@@ -1,14 +1,21 @@
-<div class="row">
-   <div class="col-md-6">
-     <table>
-        <tr>
-            <th>S No</th>
-            <th>S Name</th>
-            <th>S Age</th>
-        </tr>
-     </table>
-   </div>
-   <div class="col-md-6">
-      <app-student-details [recievedSttementFromStudents]="statement" (valueToBeSendToParent)="sendNow($event)"></app-student-details>
-   </div>
+<div class="main">
+    <div class="row">
+        <div class="col-md-6">
+            <table class="myTable">
+                <tr>
+                    <th>S No</th>
+                    <th>S Name</th>
+                    <th>S Age</th>
+                </tr>
+                <tr *ngFor="let student of students;let i =index;" (click)="onClick(student)">
+                    <td>{{student.id}}</td>
+                    <td>{{student.name}}</td>
+                    <td>{{student.age}}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-6">
+            <app-student-details [recievedStudent]="selectedStudent"></app-student-details>
+        </div>
+    </div>
 </div>

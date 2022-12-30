@@ -1,0 +1,21 @@
+.myTable{
+    width: 100%;
+    border: solid 1px grey;
+}
+.myTable tr th{
+    border: solid 1px grey;
+    text-align: center;
+    height: 30px;
+}
+.myTable tr td{
+    border: solid 1px grey;
+    text-align: center;
+    height: 45px;
+}
+.main{
+    padding: 30px;
+}
+.myTable tr:hover{
+    background-color: grey;
+    color: white;
+}
