@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HomeServiceService } from './home-service.service';
 
 @Component({
   selector: 'app-root',
@@ -7,12 +6,13 @@ import { HomeServiceService } from './home-service.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-  title = 'fnggg';
   finalValue!: number; 
 
-  constructor(private myService : HomeServiceService){}
+  constructor(){}
+
+  
   ngOnInit() {
-    this.finalValue=this.myService.add(5,8);
+
   }
 
   
