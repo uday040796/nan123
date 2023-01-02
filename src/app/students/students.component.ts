@@ -7,6 +7,8 @@ import { Component } from "@angular/core";
 })
 export class StudentsComponent {
 
+  isSelected : boolean[] = [];
+
   selectedStudent : any ;
   students: any[] = [
     {
@@ -32,10 +34,21 @@ export class StudentsComponent {
   ];
 
   ngOnInit(){
-    this.onClick(this.students[0]);
+    this.isSelected = [];
+    for(let i=0;i<this.students.length; i++){
+      this.isSelected.push(false);
+    }
+    console.log(this.isSelected);
+    this.onClick(this.students[0],0);
+    console.log(this.isSelected);
   }
 
-  onClick(student:any){
+  onClick(student:any,index : number){
+    this.isSelected = [];
+    for(let i=0;i<this.students.length; i++){
+      this.isSelected.push(false);
+    }
+   this.isSelected[index]=true;
    console.log(student);
    this.selectedStudent = student;
   }

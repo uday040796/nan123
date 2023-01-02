@@ -7,7 +7,7 @@
                     <th>S Name</th>
                     <th>S Age</th>
                 </tr>
-                <tr *ngFor="let student of students;let i =index;" (click)="onClick(student)">
+                <tr *ngFor="let student of students;let i =index;" (click)="onClick(student,i)" [ngClass]="{'selected': isSelected[i]===true}">
                     <td>{{student.id}}</td>
                     <td>{{student.name}}</td>
                     <td>{{student.age}}</td>
