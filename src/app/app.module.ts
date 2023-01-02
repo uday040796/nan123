@@ -6,12 +6,26 @@ import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { StudentsComponent } from './students/students.component';
 import { StudentDetailsComponent } from './student-details/student-details.component';
+import { HeaderComponent } from './header/header.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { CareerComponent } from './career/career.component';
+import { AccountComponent } from './account/account.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StudentsComponent,
-    StudentDetailsComponent
+    StudentDetailsComponent,
+    HeaderComponent,
+    HomeComponent,
+    AboutComponent,
+    ContactComponent,
+    CareerComponent,
+    AccountComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
