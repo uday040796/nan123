@@ -13,6 +13,8 @@ import { ContactComponent } from './contact/contact.component';
 import { CareerComponent } from './career/career.component';
 import { AccountComponent } from './account/account.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { DitrsictsComponent } from './ditrsicts/ditrsicts.component';
+import { UserService } from './user.service';
 
 @NgModule({
   declarations: [
@@ -25,13 +27,14 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ContactComponent,
     CareerComponent,
     AccountComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    DitrsictsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
