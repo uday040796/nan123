@@ -7,6 +7,8 @@ import { ContactComponent } from './contact/contact.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { SigninComponent } from './signin/signin.component';
+import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
   {path : '',redirectTo : '/header/home' , pathMatch : 'full'},
@@ -14,7 +16,10 @@ const routes: Routes = [
     {path : 'home',component : HomeComponent},
     {path : 'about' , component : AboutComponent},
     {path : 'career' , component : CareerComponent},
-    {path : 'account', component : AccountComponent},
+    {path : 'account', component : AccountComponent,children : [
+      {path : 'signin' , component : SigninComponent},
+      {path : 'signup',component : SignupComponent}
+    ]},
     {path : 'contact', component : ContactComponent},
     {path: '**' ,component : PageNotFoundComponent}
   ]},

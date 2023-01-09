@@ -15,6 +15,11 @@ import { AccountComponent } from './account/account.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { DitrsictsComponent } from './ditrsicts/ditrsicts.component';
 import { UserService } from './user.service';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SigninComponent } from './signin/signin.component';
+import { SignupComponent } from './signup/signup.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -28,11 +33,16 @@ import { UserService } from './user.service';
     CareerComponent,
     AccountComponent,
     PageNotFoundComponent,
-    DitrsictsComponent
+    DitrsictsComponent,
+    SigninComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
