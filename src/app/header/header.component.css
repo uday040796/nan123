@@ -1,0 +1,66 @@
+.header{
+    background-color: orangered;
+    height: 50px;
+    width: 100%;
+}
+.header .list1{
+    list-style: none;
+    margin-top: 10px;
+}
+.header .list1 li{
+    display: inline;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+.header .list1 li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.header .list1 li a:hover{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: white;
+    color: orangered;
+    border-radius: 3px;
+}
+.header .list2{
+    list-style: none;
+    margin-top: 10px;
+    float: right;
+}
+.header .list2 li{
+    display: inline;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.header .list2 li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.header .list2 li a:hover{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: white;
+    color: orangered;
+    border-radius: 3px;
+}
+.logo{
+    font-size: 35px;
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
