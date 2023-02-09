@@ -1,1 +1,30 @@
-<p>mobiles works!</p>
+<div class="mobiles-main">
+    <div class="row">
+        <div class="col-md-3 bd">
+            Filters
+        </div>
+        <div class="col-md-9 bd">
+            <div class="row">
+                <div class="col-md-4" *ngFor="let mobile of myMobiles;let i=index;">
+                    <div class="product">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="{{mobile.image}}"
+                                    alt="no image">
+                            </div>
+                            <div class="col-md-8">
+                                <p>{{mobile.brand}} {{mobile.model}}({{mobile.ram}}GB,{{mobile.rom}}GB)</p>
+                                <p><span class="rating" style="margin-right: 10px;">{{mobile.totalRating}}</span>Delivery : <span *ngIf="mobile.deliveryCharges !== 0">₹{{mobile.deliveryCharges}}</span> <span *ngIf="mobile.deliveryCharges === 0" class="free">Free</span></p>
+                                <p>{{mobile.noOfRatings}} Ratings & {{mobile.noOfReviews}} reviews</p>
+                                <p><span class="current-price">₹{{mobile.currentPrice}}</span><span
+                                        class="original-price"><s>₹{{mobile.originalPrice}}</s></span><span class="off">{{mobile.discountInPercentage}}% off</span></p>
+                                <button class="submit">Add To Cart</button>
+                                <button class="submit">Add To Wishlist</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

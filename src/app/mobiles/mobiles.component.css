@@ -1,0 +1,33 @@
+.mobiles-main{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.product{
+    width: 100%;
+    padding: 5px;
+}
+img{
+    width: 110px;
+    height: 248px;
+}
+.current-price{
+    font-size: 20px;
+    color: black;
+    margin-right: 7px;
+}
+.original-price{
+    font-size: 15px;
+    font-weight: lighter;
+    margin-right: 7px;
+}
+.off{
+    color: green;
+    font-weight: bold;
+    font-size: 15px;
+}
+.free{
+    color: green;
+    font-weight: bold;
+}
