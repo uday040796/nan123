@@ -14,6 +14,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
 import { SignupComponent } from './signup/signup.component';
 import { MobilesService } from './mobiles.service';
+import { SigninComponent } from './signin/signin.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { MobilesService } from './mobiles.service';
     OtherElectronicsComponent,
     PageNotFoundComponent,
     SignupComponent,
+    SigninComponent,
 
   ],
   imports: [
@@ -32,7 +34,9 @@ import { MobilesService } from './mobiles.service';
     MatDialogModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule,
+    BrowserAnimationsModule
   ],
   providers: [MobilesService],
   bootstrap: [AppComponent]
