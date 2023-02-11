@@ -14,7 +14,7 @@ body {
 .submit {
     background-color: white;
     color: orangered;
-    border: solid 2px orangered;
+    border: solid 2px white;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 5px;
@@ -37,7 +37,7 @@ body {
 .cancel {
     background-color: white;
     color: grey;
-    border: solid 2px grey;
+    border: solid 2px white;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 5px;
