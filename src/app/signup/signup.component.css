@@ -1,0 +1,19 @@
+.signup-main{
+    width: 600px;
+}
+.title{
+    font-size: 30px;
+    font-family: MS Gothic;
+    background-color: orangered;
+    color: white;
+    text-align: center;
+}
+label{
+    margin-bottom: 8px;
+    margin-top: 8px;
+    color: white;
+}
+.signup{
+    border: solid orangered 2px;
+    background-color: orangered;
+}

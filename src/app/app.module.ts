@@ -29,10 +29,10 @@ import { MobilesService } from './mobiles.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
     MatDialogModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule
   ],
   providers: [MobilesService],
   bootstrap: [AppComponent]

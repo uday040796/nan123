@@ -57,6 +57,7 @@
     background-color: white;
     color: orangered;
     border-radius: 3px;
+    cursor: pointer;
 }
 .logo{
     font-size: 35px;
