@@ -31,3 +31,16 @@ img{
     color: green;
     font-weight: bold;
 }
+.pad{
+    padding: 5px !important;
+    box-shadow: 5px 5px 5px grey;
+    border-radius: 10px;
+}
+mat-form-field{
+    width: 100% !important;
+}
+.filter{
+    margin-left: 10px;
+    color: orangered;
+    font-family: MS Gothic;
+}

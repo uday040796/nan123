@@ -15,6 +15,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { SignupComponent } from './signup/signup.component';
 import { MobilesService } from './mobiles.service';
 import { SigninComponent } from './signin/signin.component';
+import {MatSelectModule} from '@angular/material/select';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -33,10 +35,12 @@ import { SigninComponent } from './signin/signin.component';
     AppRoutingModule,
     MatDialogModule,
     BrowserAnimationsModule,
+    MatSelectModule,
     MatButtonModule,
     HttpClientModule,
     MatDialogModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule
   ],
   providers: [MobilesService],
   bootstrap: [AppComponent]

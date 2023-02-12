@@ -1,13 +1,38 @@
 <div class="mobiles-main">
     <div class="row">
-        <div class="col-md-3 bd">
-            <button mat-raised-button color="accent">Sign Up</button>
-
+        <div class="col-md-3 " style="border-radius: 10px;">
+            <div class="bd">
+                <H2 class="filter">Filters</H2>
+                <mat-form-field appearance="fill">
+                    <mat-label>Brand</mat-label>
+                    <mat-select [formControl]="brands" multiple>
+                      <mat-select-trigger>
+                        {{brands.value?.[0] || ''}}
+                        <span *ngIf="(brands.value?.length || 0) > 1" class="example-additional-selection">
+                          (+{{(brands.value?.length || 0) - 1}} {{brands.value?.length === 2 ? 'other' : 'others'}})
+                        </span>
+                      </mat-select-trigger>
+                      <mat-option *ngFor="let brand of brandList" [value]="brand">{{brand}}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                  <mat-form-field appearance="fill">
+                    <mat-label>RAM</mat-label>
+                    <mat-select [formControl]="rams" multiple>
+                      <mat-select-trigger>
+                        {{rams.value?.[0] || ''}}
+                        <span *ngIf="(rams.value?.length || 0) > 1" class="example-additional-selection">
+                          (+{{(rams.value?.length || 0) - 1}} {{rams.value?.length === 2 ? 'other' : 'others'}})
+                        </span>
+                      </mat-select-trigger>
+                      <mat-option *ngFor="let ram of ramList" [value]="ram">{{ram}} GB</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </div>
         </div>
-        <div class="col-md-9 bd">
+        <div class="col-md-9 bd" style="border-radius: 10px;">
             <div class="row">
-                <div class="col-md-4" *ngFor="let mobile of myMobiles;let i=index;">
-                    <div class="product">
+                <div class="col-md-4 " *ngFor="let mobile of myMobiles;let i=index;" style="margin-bottom: 5px;margin-top: 5px;">
+                    <div class="product pad">
                         <div class="row">
                             <div class="col-md-4">
                                 <img src="{{mobile.image}}"
@@ -26,7 +51,6 @@
                     </div>
                 </div>
             </div>
-            <h1>No Of Mobiles : {{noOfMobiles}}</h1>
         </div>
     </div>
 </div>

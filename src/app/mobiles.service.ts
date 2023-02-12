@@ -17,6 +17,11 @@ export class MobilesService implements OnInit{
     
   }
 
+  removeDuplicates(arr: any) {
+    return arr.filter((item: any,
+      index: any) => arr.indexOf(item) === index);
+  }
+
   // getData(){
   //   return myMobiles;
   // }

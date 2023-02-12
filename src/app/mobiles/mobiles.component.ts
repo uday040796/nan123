@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { mobile } from 'src/assets/interface';
 import { MobilesService } from '../mobiles.service';
 
@@ -9,18 +10,25 @@ import { MobilesService } from '../mobiles.service';
 })
 export class MobilesComponent implements OnInit {
   myMobiles: mobile[] = [];
-  noOfMobiles!: number;
+  brands = new FormControl('');
+  rams = new FormControl('');
+  ramList: string[] = [];
+  brandList: string[] = [];
 
-  constructor(private mobileService:MobilesService){}
+  constructor(private mobileService: MobilesService) { }
 
-  ngOnInit(){
-    
-   // this.myMobiles = this.mobileService.getData();
-    this.mobileService.fetchData().subscribe((res:mobile[])=>{
+  
+
+  ngOnInit() {
+    this.mobileService.fetchData().subscribe((res: mobile[]) => {
       this.myMobiles = res;
-      this.noOfMobiles= this.myMobiles.length;
-
+      this.myMobiles.forEach((ele) => {
+        this.brandList.push(ele.brand);
+        this.ramList.push(ele.ram.toString());
+      });
+      this.brandList=this.mobileService.removeDuplicates(this.brandList);
+      this.ramList=(this.mobileService.removeDuplicates(this.ramList)).sort(function(a:number, b:number){return a - b});
     });
-    
+
   }
 }
