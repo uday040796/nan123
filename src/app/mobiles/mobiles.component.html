@@ -6,27 +6,51 @@
                 <mat-form-field appearance="fill">
                     <mat-label>Brand</mat-label>
                     <mat-select [formControl]="brands" multiple>
-                      <mat-select-trigger>
-                        {{brands.value?.[0] || ''}}
-                        <span *ngIf="(brands.value?.length || 0) > 1" class="example-additional-selection">
+                        <mat-select-trigger>
+                            {{brands.value?.[0] || ''}}
+                            <span *ngIf="(brands.value?.length || 0) > 1" class="example-additional-selection">
                           (+{{(brands.value?.length || 0) - 1}} {{brands.value?.length === 2 ? 'other' : 'others'}})
                         </span>
-                      </mat-select-trigger>
-                      <mat-option *ngFor="let brand of brandList" [value]="brand">{{brand}}</mat-option>
+                        </mat-select-trigger>
+                        <mat-option *ngFor="let brand of brandList" [value]="brand">{{brand}}</mat-option>
                     </mat-select>
-                  </mat-form-field>
-                  <mat-form-field appearance="fill">
+                </mat-form-field>
+                <mat-form-field appearance="fill">
                     <mat-label>RAM</mat-label>
                     <mat-select [formControl]="rams" multiple>
-                      <mat-select-trigger>
-                        {{rams.value?.[0] || ''}}
-                        <span *ngIf="(rams.value?.length || 0) > 1" class="example-additional-selection">
+                        <mat-select-trigger>
+                            {{rams.value?.[0] || ''}}
+                            <span *ngIf="(rams.value?.length || 0) > 1" class="example-additional-selection">
                           (+{{(rams.value?.length || 0) - 1}} {{rams.value?.length === 2 ? 'other' : 'others'}})
                         </span>
-                      </mat-select-trigger>
-                      <mat-option *ngFor="let ram of ramList" [value]="ram">{{ram}} GB</mat-option>
+                        </mat-select-trigger>
+                        <mat-option *ngFor="let ram of ramList" [value]="ram">{{ram}} GB</mat-option>
                     </mat-select>
-                  </mat-form-field>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Rom</mat-label>
+                    <mat-select [formControl]="roms" multiple>
+                        <mat-select-trigger>
+                            {{roms.value?.[0] || ''}}
+                            <span *ngIf="(roms.value?.length || 0) > 1" class="example-additional-selection">
+                          (+{{(roms.value?.length || 0) - 1}} {{roms.value?.length === 2 ? 'other' : 'others'}})
+                        </span>
+                        </mat-select-trigger>
+                        <mat-option *ngFor="let roms of romList" [value]="roms">{{roms}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Rating</mat-label>
+                    <mat-select [formControl]="ratings" multiple>
+                        <mat-select-trigger>
+                            {{ratings.value?.[0] || ''}}
+                            <span *ngIf="(ratings.value?.length || 0) > 1" class="example-additional-selection">
+                          (+{{(ratings.value?.length || 0) - 1}} {{ratings.value?.length === 2 ? 'other' : 'others'}})
+                        </span>
+                        </mat-select-trigger>
+                        <mat-option *ngFor="let totalRating of ratingList" [value]="totalRating">{{totalRating}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
             </div>
         </div>
         <div class="col-md-9 bd" style="border-radius: 10px;">
@@ -35,15 +59,13 @@
                     <div class="product pad">
                         <div class="row">
                             <div class="col-md-4">
-                                <img src="{{mobile.image}}"
-                                    alt="no image">
+                                <img src="{{mobile.image}}" alt="no image">
                             </div>
                             <div class="col-md-8">
                                 <p>{{mobile.brand}} {{mobile.model}}({{mobile.ram}}GB,{{mobile.rom}}GB)</p>
                                 <p><span class="rating" style="margin-right: 10px;">{{mobile.totalRating}}</span>Delivery : <span *ngIf="mobile.deliveryCharges !== 0">₹{{mobile.deliveryCharges}}</span> <span *ngIf="mobile.deliveryCharges === 0" class="free">Free</span></p>
                                 <p>{{mobile.noOfRatings}} Ratings & {{mobile.noOfReviews}} reviews</p>
-                                <p><span class="current-price">₹{{mobile.currentPrice}}</span><span
-                                        class="original-price"><s>₹{{mobile.originalPrice}}</s></span><span class="off">{{mobile.discountInPercentage}}% off</span></p>
+                                <p><span class="current-price">₹{{mobile.currentPrice}}</span><span class="original-price"><s>₹{{mobile.originalPrice}}</s></span><span class="off">{{mobile.discountInPercentage}}% off</span></p>
                                 <button class="submit" style="width: 100%;">Add To Cart</button>
                                 <button class="submit" style="width : 100%">Add To Wishlist</button>
                             </div>
