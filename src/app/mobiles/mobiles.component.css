@@ -44,3 +44,9 @@ mat-form-field{
     color: orangered;
     font-family: MS Gothic;
 }
+mat-option{
+    text-transform: capitalize;
+}
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background, .mat-accent .mat-pseudo-checkbox-checked, .mat-accent .mat-pseudo-checkbox-indeterminate, .mat-pseudo-checkbox-checked, .mat-pseudo-checkbox-indeterminate {
+    background-color: red !important; /* Red background for example */
+}

@@ -1,4 +1,6 @@
 [{
+        "productId" : 100,
+        "typeOfProduct" : "mobile",
         "image": "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/7/p/9/-original-imaghgbyypzkzvud.jpeg?q=70",
         "brand": "realme",
         "model": "8",
@@ -13,6 +15,8 @@
         "discountInPercentage": 50
     },
     {
+        "productId" : 101,
+        "typeOfProduct" : "mobile",
         "image": "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/7/p/9/-original-imaghgbyypzkzvud.jpeg?q=70",
         "brand": "samsung",
         "model": "8",
@@ -27,6 +31,8 @@
         "discountInPercentage": 50
     },
     {
+        "productId" : 102,
+        "typeOfProduct" : "mobile",
         "image": "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/7/p/9/-original-imaghgbyypzkzvud.jpeg?q=70",
         "brand": "vivo",
         "model": "8",
@@ -41,6 +47,8 @@
         "discountInPercentage": 50
     },
     {
+        "productId" : 103,
+        "typeOfProduct" : "mobile",
         "image": "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/7/p/9/-original-imaghgbyypzkzvud.jpeg?q=70",
         "brand": "realme",
         "model": "8",
@@ -55,6 +63,8 @@
         "discountInPercentage": 50
     },
     {
+        "productId" : 104,
+        "typeOfProduct" : "mobile",
         "image": "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/7/p/9/-original-imaghgbyypzkzvud.jpeg?q=70",
         "brand": "apple",
         "model": "8",
@@ -69,6 +79,8 @@
         "discountInPercentage": 50
     },
     {
+        "productId" : 105,
+        "typeOfProduct" : "mobile",
         "image": "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/7/p/9/-original-imaghgbyypzkzvud.jpeg?q=70",
         "brand": "vivo",
         "model": "8",
@@ -83,6 +95,8 @@
         "discountInPercentage": 50
     },
     {
+        "productId" : 106,
+        "typeOfProduct" : "mobile",
         "image": "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/7/p/9/-original-imaghgbyypzkzvud.jpeg?q=70",
         "brand": "poco",
         "model": "8",

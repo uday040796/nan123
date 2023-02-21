@@ -1,0 +1,54 @@
+<div class="myWishlist">
+    <div class="product" *ngFor="let product of myProducts">
+        <div class="row">
+          <div class="col-md-3">
+            <img
+              src="{{product.image}}"
+            />
+          </div>
+          <div class="col-md-8">
+            <p style="text-transform: capitalize;">{{product.brand}} {{product.model}}({{product.ram}}GB,{{product.rom}}GB)</p>
+            <p>{{product.noOfRatings}} Ratings & {{product.noOfReviews}} reviews</p>
+            <p><span>₹{{product.currentPrice}}</span><span style="margin-right: 15px;margin-left: 15px;">₹{{product.originalPrice}}</span><span>{{product.discountInPercentage}}% off</span><select>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select></p>
+          </div>
+          <div class="col-md-1">
+            <p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                fill="currentColor"
+                class="bi bi-trash-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"
+                />
+              </svg>
+            </p>
+            <p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                fill="currentColor"
+                class="bi bi-heart-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"
+                />
+              </svg>
+            </p>
+            <p *ngIf="product.deliveryCharges !== 0" style="color : green;font-weight: bold;">₹{{product.deliveryCharges}}</p>
+            <p *ngIf="product.deliveryCharges === 0" style="color : green;font-weight: bold;">Free</p>
+          </div>
+        </div>
+      </div>
+  </div>
+  

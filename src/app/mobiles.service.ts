@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, OnInit } from '@angular/core';
 import { mobile } from 'src/assets/interface';
-import { myMobiles } from 'src/mock';
 
 @Injectable({
   providedIn: 'root'

@@ -1,0 +1,24 @@
+.myWishlist{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.product{
+    width: 100%;
+    height: 140px !important;
+    border: solid 2px lightgrey;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+img{
+    height: 100px;
+    width: 100px;
+}
+svg{
+    color: orangered;
+}
+select{
+    margin-left: 20px;
+}
