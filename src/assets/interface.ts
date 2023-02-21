@@ -1,4 +1,6 @@
 export interface mobile{
+   productId : number;
+   typeOfProduct : string;
    image : string;
    brand : string;
    model : string;
