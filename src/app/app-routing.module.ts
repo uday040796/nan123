@@ -10,7 +10,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { WishlistComponent } from './wishlist/wishlist.component';
 
 const routes: Routes = [
-  {path : '', redirectTo : '/header' , pathMatch : 'full'},
+  {path : '', redirectTo : '/header/mobiles' , pathMatch : 'full'},
   {path:'header',component : HeaderComponent,children:[
     {path : 'laptops',component : LaptopsComponent},
     {path : 'mobiles', component : MobilesComponent},

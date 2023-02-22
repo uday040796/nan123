@@ -2,14 +2,17 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CartService {
+  myUrl = '../assets/cartmock.json';
+  constructor(private http: HttpClient) {}
 
-  myUrl = "../assets/cartmock.json";
-  constructor(private http : HttpClient) { }
-
-  fetchCartDt(){
+  fetchCartDt() {
     return this.http.get(this.myUrl);
+  }
+
+  sumArray(array: any) {
+    return array.reduceRight((acc:any, cur:any) => acc + cur, 0);
   }
 }

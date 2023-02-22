@@ -72,7 +72,7 @@
                                 <img src="{{mobile.image}}" alt="no image">
                             </div>
                             <div class="col-md-8">
-                                <p>{{mobile.brand}} {{mobile.model}}({{mobile.ram}}GB,{{mobile.rom}}GB)</p>
+                                <p style="text-transform: capitalize;">{{mobile.brand}} {{mobile.model}}({{mobile.ram}}GB,{{mobile.rom}}GB)</p>
                                 <p><span class="rating"
                                         style="margin-right: 10px;">{{mobile.totalRating}}</span>Delivery : <span
                                         *ngIf="mobile.deliveryCharges !== 0">₹{{mobile.deliveryCharges}}</span> <span
