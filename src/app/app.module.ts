@@ -16,7 +16,7 @@ import { SignupComponent } from './signup/signup.component';
 import { MobilesService } from './mobiles.service';
 import { SigninComponent } from './signin/signin.component';
 import {MatSelectModule} from '@angular/material/select';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CartComponent } from './cart/cart.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
 
@@ -44,7 +44,8 @@ import { WishlistComponent } from './wishlist/wishlist.component';
     HttpClientModule,
     MatDialogModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [MobilesService],
   bootstrap: [AppComponent]

@@ -1,6 +1,6 @@
-export interface mobile{
+export interface Product{
    productId : number;
-   typeOfProduct : string;
+   type : string;
    image : string;
    brand : string;
    model : string;

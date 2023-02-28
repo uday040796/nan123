@@ -81,8 +81,8 @@
                                 <p><span class="current-price">₹{{mobile.currentPrice}}</span><span
                                         class="original-price"><s>₹{{mobile.originalPrice}}</s></span><span
                                         class="off">{{mobile.discountInPercentage}}% off</span></p>
-                                <button class="submit" style="width: 100%;">Add To Cart</button>
-                                <button class="submit" style="width : 100%">Add To Wishlist</button>
+                                <button class="submit" style="width: 100%;" (click)="moveToCart(mobile)">Add To Cart</button>
+                                <button class="submit" style="width : 100%" (click)="moveToWishlist(mobile)">Add To Wishlist</button>
                             </div>
                         </div>
                     </div>

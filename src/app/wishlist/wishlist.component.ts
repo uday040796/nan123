@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { CartService } from '../cart.service';
+import { CartComponent } from '../cart/cart.component';
 import { WishlistService } from '../wishlist.service';
 
 @Component({
@@ -7,7 +10,7 @@ import { WishlistService } from '../wishlist.service';
   styleUrls: ['./wishlist.component.css']
 })
 export class WishlistComponent implements OnInit{
-  constructor(private wishlistService : WishlistService){}
+  constructor(private wishlistService : WishlistService,private cartService : CartService,private router : Router){}
 
   myProducts : any[] = [];
 
@@ -16,5 +19,18 @@ export class WishlistComponent implements OnInit{
       console.log(response);
       this.myProducts = response;
     });
+  }
+
+  removeFromWishlist(id:number){
+    this.wishlistService.deleteProductFromWishlist(id).subscribe((response : any)=>{
+      console.log(response);
+    });
+    location.reload();
+  }
+
+  moveToCart(product:any){
+    this.cartService.postIntoCart(product).subscribe((res)=>{});
+    this.wishlistService.deleteProductFromWishlist(product.id).subscribe((res)=>{});
+    this.router.navigateByUrl('/header/cart');
   }
 }

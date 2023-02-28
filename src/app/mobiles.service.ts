@@ -1,12 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, OnInit } from '@angular/core';
-import { mobile } from 'src/assets/interface';
+import { Product } from 'src/assets/interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MobilesService implements OnInit{
-  myUrl= "../assets/mock.json";
+  urlForAllproducts = "http://localhost:8080/products";
 
   stuName = "uday";
 
@@ -26,6 +26,6 @@ export class MobilesService implements OnInit{
   // }
 
   fetchData(){
-     return this.http.get<mobile[]>(this.myUrl);
+     return this.http.get<Product[]>(this.urlForAllproducts);
   }
 }

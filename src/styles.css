@@ -12,17 +12,6 @@ body {
 
 
 .submit {
-    background-color: white;
-    color: orangered;
-    border: solid 2px white;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-radius: 3px;
-    margin-top: 2px;
-}
-.submit:hover {
     background-color: orangered;
     color: white;
     border: solid 2px white;
@@ -34,19 +23,8 @@ body {
     margin-top: 2px;
 }
 
-.cancel {
-    background-color: white;
-    color: grey;
-    border: solid 2px white;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-radius: 3px;
-    margin-top: 2px;
-}
 
-.cancel:hover {
+.cancel {
     background-color: grey;
     color: white;
     border: solid 2px white;
@@ -57,6 +35,8 @@ body {
     border-radius: 3px;
     margin-top: 2px;
 }
+
+
 
 .bd {
     border: solid 1px grey;

@@ -1,17 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { mobile } from 'src/assets/interface';
+import { Router } from '@angular/router';
+import {  Product } from 'src/assets/interface';
+import { CartService } from '../cart.service';
 import { MobilesService } from '../mobiles.service';
+import { WishlistService } from '../wishlist.service';
 
 @Component({
   selector: 'app-mobiles',
   templateUrl: './mobiles.component.html',
-  styleUrls: ['./mobiles.component.css']
+  styleUrls: ['./mobiles.component.css'],
 })
 export class MobilesComponent implements OnInit {
   userSelectedBrands: any = [];
-  myMobiles: mobile[] = [];
-  originalMobiles: mobile[] = [];
+  myMobiles: Product[] = [];
+  originalMobiles: Product[] = [];
   brands = new FormControl('');
   rams = new FormControl('');
   roms = new FormControl('');
@@ -22,13 +25,16 @@ export class MobilesComponent implements OnInit {
   ratingList: string[] = [];
   priceList: string[] = ['5000', '10000', '15000', '20000'];
 
-  constructor(private mobileService: MobilesService) { }
-
-
+  constructor(
+    private mobileService: MobilesService,
+    private cartService: CartService,
+    private wishlistService: WishlistService,
+    private router : Router
+  ) {}
 
   ngOnInit() {
-    this.mobileService.fetchData().subscribe((res: mobile[]) => {
-      this.myMobiles = res;
+    this.mobileService.fetchData().subscribe((res: Product[]) => {
+      this.myMobiles = res.filter((ele)=>ele.type === 'mobile');
       this.originalMobiles = res;
       this.myMobiles.forEach((ele) => {
         this.brandList.push(ele.brand);
@@ -37,11 +43,33 @@ export class MobilesComponent implements OnInit {
         this.ratingList.push(ele.totalRating.toString());
       });
       this.brandList = this.mobileService.removeDuplicates(this.brandList);
-      this.ramList = (this.mobileService.removeDuplicates(this.ramList)).sort(function (a: number, b: number) { return a - b });
-      this.romList = (this.mobileService.removeDuplicates(this.romList)).sort(function (a: number, b: number) { return a - b });
+      this.ramList = this.mobileService
+        .removeDuplicates(this.ramList)
+        .sort(function (a: number, b: number) {
+          return a - b;
+        });
+      this.romList = this.mobileService
+        .removeDuplicates(this.romList)
+        .sort(function (a: number, b: number) {
+          return a - b;
+        });
       this.ratingList = this.mobileService.removeDuplicates(this.ratingList);
     });
+  }
 
+  moveToCart(mobile: any) {
+    console.log(mobile);
+    this.cartService.postIntoCart(mobile).subscribe((res) => {
+      console.log(res);
+    });
+    this.router.navigateByUrl('/header/cart');
+  }
+
+  moveToWishlist(mobile: any) {
+    this.wishlistService.postIntoWishlist(mobile).subscribe((res) => {
+      console.log(res);
+    });
+    this.router.navigateByUrl('/header/wishlist');
   }
 
   onBrandSelection() {
@@ -53,10 +81,10 @@ export class MobilesComponent implements OnInit {
         let filteredArr = this.myMobiles.filter((ele) => ele.brand === bnd);
         for (let i = 0; i < filteredArr.length; i++) {
           dummyBrands.push(filteredArr[i]);
-        };
+        }
       });
       this.myMobiles = dummyBrands;
-    }else{
+    } else {
       this.myMobiles = this.originalMobiles;
     }
   }

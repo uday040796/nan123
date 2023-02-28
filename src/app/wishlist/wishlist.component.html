@@ -17,17 +17,13 @@
           <span>₹{{ product.currentPrice }}</span
           ><span style="margin-right: 15px; margin-left: 15px"
             >₹{{ product.originalPrice }}</span
-          ><span>{{ product.discountInPercentage }}% off</span
-          ><select>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
+          ><span>{{ product.discountInPercentage }}% off</span>
         </p>
       </div>
       <div class="col-md-1">
         <p>
           <svg
+            (click)="removeFromWishlist(product.id)"
             xmlns="http://www.w3.org/2000/svg"
             width="25"
             height="25"
@@ -42,6 +38,7 @@
         </p>
         <p>
           <svg
+            (click)="moveToCart(product)"
             xmlns="http://www.w3.org/2000/svg"
             width="25"
             height="25"
